@@ -2,10 +2,6 @@ windows command
 cd..
 cd
 mkdir
-dir
-Linux commands
-ls cd.. cd
-mkdir 
 
 mv cp-r
 rm
