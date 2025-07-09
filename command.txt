@@ -1,0 +1,8 @@
+windows command
+cd..
+cd
+mkdir
+dir
+Linux commands
+ls cd.. cd
+mkdir 
