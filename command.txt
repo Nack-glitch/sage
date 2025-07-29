@@ -1,8 +1,0 @@
-windows command
-cd..
-cd
-mkdir
-
-mv cp-r
-rm
-touch
