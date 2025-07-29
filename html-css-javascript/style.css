@@ -1,0 +1,125 @@
+
+.top{
+    align-items: center;
+    left: auto;
+    text-align: right;
+    margin: 50px;   
+}
+.head{
+  
+    text-decoration: none;
+    height: 15px;
+    font-size: 20.17px;
+    font-weight: bold;
+    font-family:sans-serif;
+
+}
+.formation{
+       font-size: small;
+    font-family: sans-serif;
+}
+
+
+.logo{
+  width: 25.62px;
+  height: 24.28px;
+}
+main{
+    display: flex;
+}
+.rectangleimg{
+    padding: 30px;
+    height: 650px;
+    width: 500px;
+    margin-top: -15px;
+}
+.formall{
+    margin: auto;
+ 
+}
+.formone{
+   display: flex;
+   gap: 10px;
+   margin-bottom: 10px;
+  
+  
+}
+.formation{
+   
+}
+#FirstName{
+     height: 32px;
+   width: 230px;
+}
+#LastName{
+     height: 32px;
+   width: 230px;
+}
+.formtwo{
+     display: flex;
+   gap: 10px;
+   margin-bottom: 10px;
+  
+}
+#Email{
+       height: 32px;
+   width: 230px;
+}
+#phoneNumber{
+        height: 32px;
+   width: 230px;
+}
+#Password{
+    width: 480px;
+    height: 32px;
+   margin-bottom: 10px;
+}
+#ConfirmPassword{
+     width: 480px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+.checkbox{
+    display: flex;
+    font-size: x-small;
+    margin-top: -2px;
+    
+}
+.checkboox{
+    display: block;
+    
+}
+button{
+    background-color: #3869EB;
+    color:#ffff;
+       width: 488px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    
+}
+.text{
+    text-align: center;
+    font-size: x-small;
+    padding: 10px;
+}
+.line{
+    text-align: center;
+    font-weight: 10;
+}
+.media{
+    display: flex;
+    margin: 50px;
+    margin-top: 5px;
+}
+.Facebook{
+    padding: 50px;
+   
+}
+.Google{
+    padding: 50px;
+}
+.Apple{
+    padding: 50px;
+}
