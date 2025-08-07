@@ -5,37 +5,27 @@ function UserForm() {
   const [lastName, setLastName] = useState('');
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
-  const [hobbies, setHobbies] = useState({
-    music: false,
-    football: false,
-    drawing: false,
-    swimming: false
-  });
+  const [hobbies, setHobbies] = useState([]);
 
   function handleHobbyChange(e) {
     const name = e.target.name;
     const checked = e.target.checked;
-    const copy = { ...hobbies };
-    copy[name] = checked;
-    setHobbies(copy);
+    if (checked)
+    setHobbies((h)=>[...h,name]);
+  else
+    setHobbies((h)=>h.filter((h)=>h!== name));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    let selectedHobbies = '';
-    for (const key in hobbies) {
-      if (hobbies[key]) {
-        selectedHobbies += key + ', ';
-      }
-    }
 
     alert(
       'First Name: ' + firstName + '\n' +
       'Last Name: ' + lastName + '\n' +
       'Gender: ' + gender + '\n' +
       'Age: ' + age + '\n' +
-      'Hobbies: ' + selectedHobbies
+      'Hobbies: ' + hobbies
     );
   }
 

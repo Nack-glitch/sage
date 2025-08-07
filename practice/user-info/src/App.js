@@ -6,7 +6,7 @@ function App() {
     <>
     <div>
       
-      <h2>Simple User Form</h2>
+      <h2>Create account</h2>
       <UserForm/>
     </div>
     </>
