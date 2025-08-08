@@ -3,8 +3,8 @@ import Header from "../components/Header";
 
 function Catagory(){
     return<>
-     <Header/>
- <Link to="/catagory/electronics">electronics</Link>
+
+ <Link to="/catagory/eectronics">electronics</Link>
  <h1>catagoy page</h1>
 
     </>

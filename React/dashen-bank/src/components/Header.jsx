@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 function Header(){
     return <>
-     <nav>
+     <nav style={{display: "flex" , justifyContent:"space-between"}}>
         <Link to="/">Home</Link>
         <br/>
         <Link to ="/About">ABOUT</Link>
