@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import './App.css';
 
+import {useSelector} from 'react-redux';
+import Button from './components/Button';
 function App() {
  
-  const [counter,setcounter] =useState(0)
+
+  const count =useSelector ((state)=> state.counter.value);
+
     return (
   <>
-  <div style={{display:"flex"}}>
-    <h1>Awash counter app</h1>
-    <div style={{displayColomun:"center"}}>
-    <button  onClick={()=>setcounter(counter+1)} >add</button>
-    <p>{counter}</p>
-    <button onClick={()=>setcounter(counter-1)} >substract</button>
-    </div>
-      </div>
+<Button/>
     </>
   
     )

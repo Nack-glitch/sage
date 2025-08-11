@@ -4,7 +4,7 @@ function UseState(){
     return <>
     <button onClick={()=>setcounter(counter+1)} >Add</button>
     <p>{counter}</p>
-    <button onClick={()=>setcounter(counter-1)} >Substract</button>
+    <button onClick={()=>setcounter(counter)} >subtract</button>
     </>
 }
 export default UseState
