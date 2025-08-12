@@ -1,7 +1,9 @@
 import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image, TextInput, Button} from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View ,Image, TextInput, Button,Switch} from 'react-native';
 
 export default function App() {
+  const[on,setOn]=useState(false)
   return (
     <View style={{flex:1,justifyContent:"center",alignItems:"center"}}             >
       <Text style={{fontSize:30,fontFamily:"sans sirif",}} >my first app</Text>
@@ -13,8 +15,8 @@ export default function App() {
     style={{borderWidth:1 ,padding:20}}
     />
     <Button title='click me' onPress={()=>alert("clicked")}
-       style={{setStatusBarBackgroundColor:"red"}}/>
-      
+       style={{setStatusBarBackgroundColor:"red"}}  />
+    <Switch value={on} onValueChange={setOn}/>  
     </View>
   );
 }
