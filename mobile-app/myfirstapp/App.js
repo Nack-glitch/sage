@@ -1,24 +1,39 @@
-import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { StyleSheet, Text, View ,Image, TextInput, Button,Switch} from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen';
+import ServicesScreen from './screens/ServicesScreen';
+import ContactScreen from './screens/ContactScreen';
+import { Ionicons } from '@expo/vector-icons';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
-  const[on,setOn]=useState(false)
   return (
-    <View style={{flex:1,justifyContent:"center",alignItems:"center"}}             >
-      <Text style={{fontSize:30,fontFamily:"sans sirif",}} >my first app</Text>
-    <Image source={{uri:"https://cdn.wallpapersafari.com/44/55/kp50Ri.jpg"}}
-    style={{width:100,height:100}}
-    />
-    <TextInput 
-    placeholder='ENTER YOUR NAME'
-    style={{borderWidth:1 ,padding:20}}
-    />
-    <Button title='click me' onPress={()=>alert("clicked")}
-       style={{setStatusBarBackgroundColor:"red"}}  />
-    <Switch value={on} onValueChange={setOn}/>  
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarActiveTintColor: '#6A0DAD',
+          tabBarInactiveTintColor: '#aaa',
+          headerStyle: { backgroundColor: '#4b077bff' },
+          headerTintColor: '#fff',
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+            if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
+            else if (route.name === 'About') iconName = focused ? 'information-circle' : 'information-circle-outline';
+            else if (route.name === 'Services') iconName = focused ? 'list' : 'list-outline';
+            else if (route.name === 'Contact') iconName = focused ? 'call' : 'call-outline';
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+        })}
+      >
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="About" component={AboutScreen} />
+        <Tab.Screen name="Services" component={ServicesScreen} />
+        <Tab.Screen name="Contact" component={ContactScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-
