@@ -1,39 +1,36 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
-import ServicesScreen from './screens/ServicesScreen';
-import ContactScreen from './screens/ContactScreen';
-import { Ionicons } from '@expo/vector-icons';
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
+import {View,Text,Image,TextInput,Button} from "react-native";
+import { SafeAreaView,SafeAreaProvider} from "react-native-safe-area-context";
+import Greet from "./componemts/Greet";
+import UserInput from "./componemts/UserInput";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+export default function App(){
+  const Stack=createNativeStackNavigator();
+  return(
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarActiveTintColor: '#6A0DAD',
-          tabBarInactiveTintColor: '#aaa',
-          headerStyle: { backgroundColor: '#4b077bff' },
-          headerTintColor: '#fff',
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
-            else if (route.name === 'About') iconName = focused ? 'information-circle' : 'information-circle-outline';
-            else if (route.name === 'Services') iconName = focused ? 'list' : 'list-outline';
-            else if (route.name === 'Contact') iconName = focused ? 'call' : 'call-outline';
+       <Stack.Navigator  initialRouteName="Home" >
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="About" component={About}/>
 
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}
-      >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="About" component={AboutScreen} />
-        <Tab.Screen name="Services" component={ServicesScreen} />
-        <Tab.Screen name="Contact" component={ContactScreen} />
-      </Tab.Navigator>
+       </Stack.Navigator>
+
+
     </NavigationContainer>
-  );
+    //   <SafeAreaProvider>
+    //   <SafeAreaView>
+    // <View style={{flex:"1",justifyContent:"center",alignItems:"center"}}>
+    
+    //   <Text>react native</Text>
+    //   <Greet name="naol"/>
+    //   <Image source={{uri:"https://gratisography.com/wp-content/uploads/2025/05/gratisography-dino-party-1036x780.jpg"}}
+    //   style={{height:100,width:100}}/>
+    //   <UserInput/>
+    //   <TextInput
+    //   placeholder="write as you want"
+    //   style={{borderWidth:1,padding:20}}/>
+    //   <Button title="click me " onPress={()=>alert("not allowed")}/>
+    // </View>
+    // </SafeAreaView>
+    // </SafeAreaProvider>
+  )
 }
