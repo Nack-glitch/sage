@@ -4,6 +4,7 @@ import Greet from "./componemts/Greet";
 import UserInput from "./componemts/UserInput";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
+import SmallList from "./component/SmallList"
 export default function App(){
   const Stack=createNativeStackNavigator();
   return(
@@ -13,9 +14,10 @@ export default function App(){
         <Stack.Screen name="About" component={About}/>
 
        </Stack.Navigator>
-
+    <SmallList/>
 
     </NavigationContainer>
+
     //   <SafeAreaProvider>
     //   <SafeAreaView>
     // <View style={{flex:"1",justifyContent:"center",alignItems:"center"}}>
