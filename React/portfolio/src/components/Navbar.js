@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner">
-        <a href="#home" className="nav__logo" onClick={closeMenu}>Capra-Nack</a>
+        <a href="#home" className="nav__logo" onClick={closeMenu}>NG</a>
 
         <button
           aria-label="Toggle menu"
