@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 
 const items = [
   { label: "HTML / CSS", value: 70 },
-  { label: "JavaScript (ES6+)", value: 30 },
+  { label: "JavaScript ", value: 30 },
   { label: "React.js", value: 60 },
   { label: "Node.js / Express", value: 0 },
   { label: "MongoDB", value: 0 },
-  { label: "Git & GitHub", value: 80 },
-  { label: "UI/UX (Figma)", value: 70 },
+  { label: "Git & GitHub", value: 70 },
+  { label: "UI/UX (Figma)", value: 65 },
+  { label: "C++", value: 10 },
 ];
 
 export default function Skills() {
@@ -35,7 +36,7 @@ export default function Skills() {
                 initial={{ width: 0 }}
                 whileInView={{ width: `${s.value}%` }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1 }}
               />
             </div>
           </motion.div>

@@ -30,7 +30,7 @@ export default function Home() {
         className="hero__cta"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.3   }}
       >
         <a className="btn btn--primary" href="#projects">View Projects</a>
         <a className="btn btn--ghost" href="#contact">Hire Me</a>
@@ -44,7 +44,6 @@ export default function Home() {
   transition={{ delay: 0.4, duration: 0.8 }}
   style={{ position: "relative", display: "inline-block" }} // container for layering
 >
-  {/* Video */}
   <video
     src={bgVideo}
     autoPlay
@@ -53,7 +52,6 @@ export default function Home() {
     className="device-video"
   />
 
-  {/* Full overlay text */}
   <div className="video-overlay">
     <h2>Capra-Nack</h2>
   </div>

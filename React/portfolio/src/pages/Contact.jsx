@@ -9,7 +9,7 @@ export default function Contact() {
 
   const onSubmit = e => {
     e.preventDefault();
-    // Simple mailto fallback (no backend needed)
+
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
     window.location.href = `mailto:naol@example.com?subject=Project%20Inquiry&body=${body}`;
     setSent(true);
