@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./Calculator.css"; // optional if you want to move CSS to a separate file
-
+import "./Calculator.css"; 
 export default function Calculator() {
   const [input, setInput] = useState("");
 
@@ -18,7 +17,6 @@ export default function Calculator() {
 
   const calculate = () => {
     try {
-      // Simple eval calculation
       setInput(eval(input).toString());
     } catch {
       setInput("Error");
@@ -27,17 +25,13 @@ export default function Calculator() {
 
   return (
     <div className="calculator">
-      {/* Display */}
       <input
         type="text"
         className="calculator-display"
         value={input}
         readOnly
       />
-
-      {/* Buttons */}
       <div className="calculator-buttons">
-        {/* First row */}
         <button className="clear" onClick={clearInput}>
           C
         </button>
@@ -45,7 +39,6 @@ export default function Calculator() {
         <button onClick={() => handleClick("%")}>%</button>
         <button onClick={() => handleClick("/")}>÷</button>
 
-        {/* Numbers and operators */}
         {[7, 8, 9].map((n) => (
           <button key={n} onClick={() => handleClick(n.toString())}>
             {n}
@@ -66,8 +59,6 @@ export default function Calculator() {
           </button>
         ))}
         <button onClick={() => handleClick("+")}>+</button>
-
-        {/* Last row */}
         <button onClick={() => handleClick("0")}>0</button>
         <button onClick={() => handleClick(".")}>.</button>
         <button className="equal" onClick={calculate}>
