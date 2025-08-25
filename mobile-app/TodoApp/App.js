@@ -12,8 +12,6 @@ const add = () => {
     setTask(''); 
   }
 };
-
-
   const del = id => setTasks(tasks.filter(t => t.id !== id));
 
   return (

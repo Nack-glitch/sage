@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +11,6 @@ export default function Contact() {
     setEmail("");
     setMessage("");
   };
-
   return (
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
