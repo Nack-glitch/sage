@@ -1,125 +1,119 @@
-
-.top{
-    align-items: center;
-    left: auto;
-    text-align: right;
-    margin: 50px;   
+*{
+    margin: 0;
+    padding: 0;
 }
-.head{
-  
-    text-decoration: none;
-    height: 15px;
-    font-size: 20.17px;
-    font-weight: bold;
-    font-family:sans-serif;
-
+body{
+   background-color: #f5f7fa;
 }
-.formation{
-       font-size: small;
-    font-family: sans-serif;
-}
-
-
-.logo{
-  width: 25.62px;
-  height: 24.28px;
-}
-main{
-    display: flex;
-}
-.rectangleimg{
-    padding: 30px;
-    height: 650px;
-    width: 500px;
-    margin-top: -15px;
-}
-.formall{
-    margin: auto;
- 
-}
-.formone{
+header{
    display: flex;
-   gap: 10px;
-   margin-bottom: 10px;
-  
-  
+   justify-content: space-between;
+   padding: 11.14px 100.23px;
+   height: Hug(58.76px);
+   width: fixed(1002.34px);
+   background-color: #ffffff;
+
 }
-.formation{
+.logo{
+    height:16.71px;
+    width:24.36px ;
+    gap: 5.57px;
+}
+.co-logo{
+    height: 14.38px;
+    width: 77.61px; 
+    padding: 16.71px;
+    font-size: bold;
+    gap: 5.57px;
+
+}
+.nav{
+    display: flex;
+    align-items: center;
    
 }
-#FirstName{
-     height: 32px;
-   width: 230px;
+a{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    
+
 }
-#LastName{
-     height: 32px;
-   width: 230px;
-}
-.formtwo{
-     display: flex;
-   gap: 10px;
-   margin-bottom: 10px;
+.navbar{
+    padding: 16.71px;
+    height: Hug(17px);
+    width: Hug(307.82);
   
 }
-#Email{
-       height: 32px;
-   width: 230px;
-}
-#phoneNumber{
-        height: 32px;
-   width: 230px;
-}
-#Password{
-    width: 480px;
-    height: 32px;
-   margin-bottom: 10px;
-}
-#ConfirmPassword{
-     width: 480px;
-    height: 32px;
-    margin-bottom: 10px;
-}
-.checkbox{
-    display: flex;
-    font-size: x-small;
-    margin-top: -2px;
-    
-}
-.checkboox{
-    display: block;
-    
-}
-button{
-    background-color: #3869EB;
-    color:#ffff;
-       width: 488px;
-    height: 40px;
+.button{
+    padding: 9.74px 22.27px;
+    gap: 5.57px;
+    height: Hug(36.49px);
+    width: Hug(133.25px);
+    background-color: #4caF4F;
+    border-radius: 2.78px;
     border: none;
-    border-radius: 5px;
-    display: block;
+    align-items: center;
+    display: flex;
+    color: #FFF;
+ 
+  
+}
+
+.vector{
+    align-items: center;
+    height: 11.14px;
+    width: 11.14px;
+}
+.wow{
+   
+    display: flex;
+    justify-content: space-between;
+    margin-left: 110px;
+    margin-top: 130px;
+}
+.class1 .bold{
+    height:106px ;
+    width: 457.32px;
+    font-weight: 600;
+    font-size: 47px;
+    line-height: 52.9px;
+    letter-spacing: 0%;
+    font-style: semi Bold;
     
 }
-.text{
-    text-align: center;
-    font-size: x-small;
-    padding: 10px;
+.class1 .message{
+    height: 17px;
+    width: 457.32px;
+    font-weight: 400;
+    font-style: regular;
+    font-size: 11.14px;
+    letter-spacing: 0%;
+    color: #717171;
+    margin-top: 11.14px;
 }
-.line{
-    text-align: center;
-    font-weight: 10;
+.class1 .click{
+    height: Hug(39.27px);
+    width: Hug(93.55px);
+    border-radius: 2.78px;
+    padding: 11.14px 22.27px;
+    border: none;
+    gap: 6.96px;
+    background-color: #4caF4F;
+    color: #FFF;
+    margin-top: 22.27px;
+    
 }
-.media{
-    display: flex;
-    margin: 50px;
-    margin-top: 5px;
+.class2 .pic{
+    height: 283.3px;
+    width: 272.16px;
+    margin-right: 110px;
 }
-.Facebook{
-    padding: 50px;
-   
-}
-.Google{
-    padding: 50px;
-}
-.Apple{
-    padding: 50px;
+.dot{
+    height: Hug(6.96px);
+    width: Hug(32.92px);
+    margin-top: 145.32px;
+    margin-left: 600.16px;
+    gap: 5.57px;
+    align-items: center;
 }
