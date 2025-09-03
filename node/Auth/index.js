@@ -6,12 +6,10 @@ const jwt = require("jsonwebtoken");
 const app = express();
 app.use(express.json());
 
-// --- Connect MongoDB ---
 mongoose.connect("mongodb://localhost:27017/abay")
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error(err));
 
-// --- User Schema & Model ---
 const User = mongoose.model("User", new mongoose.Schema({
   name: String,
   phoneNumber: { type: Number, unique: true },
@@ -38,7 +36,6 @@ const isAdmin = (req, res, next) => {
   next();
 };
 
-// --- Routes ---
 app.post("/register", async (req, res) => {
   const { name, phoneNumber, gender, password, role } = req.body;
   const hashed = await bcrypt.hash(password, 8);
@@ -66,5 +63,6 @@ app.get("/admin/users", auth, isAdmin, async (req, res) => {
   res.json(await User.find());
 });
 
-// --- Start Server ---
-app.listen(5800, () => console.log("Server running on 5800"));
+app.listen(5800, () => {
+  console.log("Server running on 5800")
+});
